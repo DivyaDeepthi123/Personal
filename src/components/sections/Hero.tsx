@@ -92,17 +92,17 @@ export function HeroSection() {
 
           <div>
             <h1 className="text-2xl md:text-3xl font-normal tracking-wider leading-tight text-foreground mb-1">
-              Hey!!! I am Deepthi
+              Hey!!! I am <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600 font-bold">Deepthi</span>
             </h1>
-            <p className="text-muted-foreground text-[9px] md:text-[10px] font-mono lowercase">
+            <p className="text-muted-foreground text-[9px] md:text-[10px] font-mono">
               Applied AI Researcher (Deep Learning & LLMs)
             </p>
           </div>
         </div>
 
         {mounted && (
-          <p className="text-muted-foreground text-2xl md:text-4xl font-normal lowercase tracking-tight">
-            how&apos;s your {day}?
+          <p className="text-muted-foreground text-l md:text-xl font-normal tracking-tight">
+            How&apos;s your {day}?
           </p>
         )}
       </div>

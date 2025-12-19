@@ -1,19 +1,21 @@
 import React from 'react';
 import {
-  Triangle,
-  Github,
-  Send,
-  MousePointer2,
-  Hexagon,
-  Flame,
+  Code2,
+  Code,
   Database,
-  Leaf,
-  Zap,
+  Link,
+  Share2,
+  Braces,
+  Cloud,
+  CloudCog,
   Boxes,
-  Atom,
-  RefreshCw,
-  Wind,
-  Code2
+  Table,
+  Brain,
+  Terminal,
+  Layers,
+  MousePointer2,
+  CodeSquare,
+  Zap
 } from 'lucide-react';
 
 interface TechItem {
@@ -23,23 +25,24 @@ interface TechItem {
 }
 
 const techStack: TechItem[] = [
-  { name: 'Python', Icon: Triangle, iconColor: 'text-white' },
-  { name: 'C', Icon: Github, iconColor: 'text-white' },
-  { name: 'SQL', Icon: Database, iconColor: 'text-blue-400' },
-  { name: 'LangChain', Icon: Send, iconColor: 'text-orange-500' },
-  { name: 'Langgraph', Icon: MousePointer2, iconColor: 'text-sky-400' },
-  { name: 'JavaScript', Icon: Atom, iconColor: 'text-cyan-400' },
-  { name: 'AWS', Icon: Hexagon, iconColor: 'text-green-500' },
-  { name: 'Docker', Icon: Flame, iconColor: 'text-orange-600' },
-  { name: 'GCP', Icon: Code2, iconColor: 'text-yellow-400' },
-  { name: 'Pandas', Icon: Code2, iconColor: 'text-blue-500' },
-  { name: 'Large Language Models', Icon: Leaf, iconColor: 'text-green-600' },
-  { name: 'Linux', Icon: Zap, iconColor: 'text-red-500' },
-  { name: 'RAG', Icon: Boxes, iconColor: 'text-orange-400' },
-  { name: 'Cursor', Icon: Triangle, iconColor: 'text-white' },
-  { name: 'VSCode', Icon: RefreshCw, iconColor: 'text-red-400' },
-  { name: 'Kiro', Icon: Wind, iconColor: 'text-sky-400' },
+  { name: 'Python', Icon: Code2, iconColor: 'text-yellow-400' },
+  { name: 'C', Icon: Code, iconColor: 'text-blue-400' },
+  { name: 'SQL', Icon: Database, iconColor: 'text-sky-400' },
+  { name: 'LangChain', Icon: Link, iconColor: 'text-orange-500' },
+  { name: 'LangGraph', Icon: Share2, iconColor: 'text-sky-400' },
+  { name: 'JavaScript', Icon: Braces, iconColor: 'text-yellow-300' },
+  { name: 'AWS', Icon: Cloud, iconColor: 'text-orange-400' },
+  { name: 'Docker', Icon: Boxes, iconColor: 'text-blue-500' },
+  { name: 'GCP', Icon: CloudCog, iconColor: 'text-green-400' },
+  { name: 'Pandas', Icon: Table, iconColor: 'text-indigo-400' },
+  { name: 'Large Language Models', Icon: Brain, iconColor: 'text-pink-400' },
+  { name: 'Linux', Icon: Terminal, iconColor: 'text-white' },
+  { name: 'RAG', Icon: Layers, iconColor: 'text-orange-400' },
+  { name: 'Cursor', Icon: MousePointer2, iconColor: 'text-white' },
+  { name: 'VSCode', Icon: CodeSquare, iconColor: 'text-blue-400' },
+  { name: 'Kiro', Icon: Zap, iconColor: 'text-purple-400' },
 ];
+
 
 const TechStack: React.FC = () => {
   return (

@@ -10,11 +10,11 @@ const About = () => {
       </div>
       <div>
         <p className="text-muted-foreground text-sm flex items-center gap-1.5">
-          Press{" "}
+          (Press{" "}
           <kbd className="text-foreground text-[10px] border border-border px-1.5 py-0.5 rounded bg-secondary hover:bg-foreground/10 transition-colors cursor-pointer font-mono min-w-[1.5rem] text-center shadow-sm">
             C
           </kbd>{" "}
-          to copy my email
+          to copy my email)
         </p>
       </div>
     </section>

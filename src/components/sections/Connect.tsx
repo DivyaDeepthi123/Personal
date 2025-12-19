@@ -52,7 +52,7 @@ const Connect = () => {
             </p>
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-[#A1A1AA] text-sm font-mono">America/Chicago</span>
+            <span className="text-[#A1A1AA] text-sm font-mono">Andhra Pradesh, India</span>
           </div>
         </div>
       </footer>
