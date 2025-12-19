@@ -53,51 +53,52 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Profile Info */}
-        <div className="flex flex-row items-center gap-10">
-          <div className="flex flex-col items-center gap-2">
-            {mounted && (
-              <p className="text-muted-foreground/60 text-[10px] md:text-xs font-mono lowercase whitespace-nowrap">
-                how&apos;s your {day}?
-              </p>
-            )}
-            <div className="relative w-fit">
-               <Image
-                  alt="Profile"
-                  width={64}
-                  height={64}
-                  className="w-16 h-16 rounded-full object-cover"
-                  src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/_-1766130699563.jpeg?width=8000&height=8000&resize=contain"
-                  priority
-                />
-              
-              {/* Status Indicator */}
-              <div className="absolute bottom-0 right-0 group">
-                <span className="w-3.5 h-3.5 bg-background rounded-full flex items-center justify-center cursor-pointer border-[1.5px] border-background">
-                  <span className="w-2.5 h-2.5 bg-success rounded-full"></span>
-                </span>
-                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-50">
-                  <div className="bg-secondary/80 backdrop-blur-xl border border-border rounded-xl px-2.5 py-1.5 flex items-center gap-2 whitespace-nowrap shadow-lg">
-                    <span className="w-2 h-2 bg-success rounded-full"></span>
-                    <span className="text-foreground text-[10px] uppercase font-mono tracking-tight">
-                      Available for work
-                    </span>
+        {/* Profile Info */}
+          <div className="flex flex-row items-center gap-10">
+            <div className="flex flex-col items-center gap-2">
+              <div className="relative w-fit">
+                 <Image
+                    alt="Profile"
+                    width={64}
+                    height={64}
+                    className="w-16 h-16 rounded-full object-cover"
+                    src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/_-1766130699563.jpeg?width=8000&height=8000&resize=contain"
+                    priority
+                  />
+                
+                {/* Status Indicator */}
+                <div className="absolute bottom-0 right-0 group">
+                  <span className="w-3.5 h-3.5 bg-background rounded-full flex items-center justify-center cursor-pointer border-[1.5px] border-background">
+                    <span className="w-2.5 h-2.5 bg-success rounded-full"></span>
+                  </span>
+                  <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-50">
+                    <div className="bg-secondary/80 backdrop-blur-xl border border-border rounded-xl px-2.5 py-1.5 flex items-center gap-2 whitespace-nowrap shadow-lg">
+                      <span className="w-2 h-2 bg-success rounded-full"></span>
+                      <span className="text-foreground text-[10px] uppercase font-mono tracking-tight">
+                        Available for work
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+  
+              <div>
+                  <h1 className="text-2xl md:text-3xl font-normal tracking-wider leading-tight text-foreground mb-1">
+                    Hey!!! I am Deepthi
+                  </h1>
+                    <p className="text-muted-foreground text-[9px] md:text-[10px] font-mono lowercase">
+                      Applied AI Researcher (Deep Learning & LLMs)
+                    </p>
+                </div>
           </div>
 
-            <div>
-                <h1 className="text-2xl md:text-3xl font-normal tracking-wider leading-tight text-foreground mb-1">
-                  Hey!!! I am Deepthi 
-                </h1>
-                  <p className="text-muted-foreground text-[10px] md:text-[11px] font-mono lowercase">
-                    Applied AI Researcher (Deep Learning & LLMs)
-                  </p>
-              </div>
-        </div>
-    </section>
+          {mounted && (
+            <p className="text-muted-foreground/60 text-[10px] md:text-xs font-mono lowercase whitespace-nowrap mt-4">
+              how&apos;s your {day}?
+            </p>
+          )}
+      </section>
   );
 };
 
