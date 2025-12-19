@@ -92,12 +92,12 @@ const HeroSection = () => {
           </div>
 
             <div>
-              <h1 className="text-2xl md:text-3xl font-normal tracking-wider leading-tight text-foreground mb-1">
-                Hey!!! I am Deepthi 
-              </h1>
-                <p className="text-muted-foreground text-sm md:text-base font-mono">
-                  Applied AI Researcher (Deep Learning & LLMs)
-                </p>
+                <h1 className="text-2xl md:text-3xl font-normal tracking-wider leading-tight text-foreground mb-1">
+                  Hey!!! I am Deepthi 
+                </h1>
+                  <p className="text-muted-foreground text-xs md:text-sm font-mono lowercase">
+                    Applied AI Researcher (Deep Learning & LLMs)
+                  </p>
               </div>
         </div>
     </section>
