@@ -32,16 +32,16 @@ const ProjectCard = ({ project }: { project: ProjectItem }) => {
   return (
     <div className="border border-border rounded-lg border-dashed hover:bg-secondary/50 transition-all group">
       <div className="flex flex-col gap-2 p-4">
-        <div className="flex items-center justify-between">
-          <h3 className="font-medium text-sm font-mono text-foreground group-hover:text-foreground/80 transition-colors">
-            {project.title}
-          </h3>
-        </div>
-        <div className="text-sm text-muted">
-          <p className="leading-relaxed text-xs font-mono tracking-wider">
-            {project.shortDescription}
-          </p>
-        </div>
+          <div className="flex items-center justify-between">
+            <h3 className="font-medium text-base font-mono text-foreground group-hover:text-foreground/80 transition-colors">
+              {project.title}
+            </h3>
+          </div>
+          <div className="text-sm text-muted">
+            <p className="leading-relaxed text-sm font-mono tracking-wider">
+              {project.shortDescription}
+            </p>
+          </div>
         <div className="flex justify-between items-center mt-1">
           <button
             onClick={() => setIsExpanded(!isExpanded)}
@@ -73,12 +73,12 @@ const ProjectCard = ({ project }: { project: ProjectItem }) => {
         <div className="px-4 pb-4 border-t border-border/50">
           <div className="pt-4 space-y-3">
             {project.extendedDescription.map((desc, index) => (
-              <p
-                key={index}
-                className="leading-relaxed text-xs font-mono tracking-wider text-muted"
-              >
-                {desc}
-              </p>
+                <p
+                  key={index}
+                  className="leading-relaxed text-sm font-mono tracking-wider text-muted"
+                >
+                  {desc}
+                </p>
             ))}
           </div>
         </div>
@@ -90,7 +90,7 @@ const ProjectCard = ({ project }: { project: ProjectItem }) => {
 export default function Projects() {
   return (
     <section className="flex flex-col gap-8 max-w-2xl mx-auto px-4 pb-10">
-      <h2 className="text-muted text-sm font-mono">Projects I&apos;ve Built</h2>
+      <h2 className="text-muted text-base font-mono uppercase tracking-wider">Projects I&apos;ve Built</h2>
       <div className="flex flex-col gap-4">
         {projects.map((project) => (
           <ProjectCard key={project.id} project={project} />

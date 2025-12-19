@@ -52,22 +52,22 @@ const techStack: TechItem[] = [
 const TechStack: React.FC = () => {
   return (
     <section className="flex flex-col gap-8 max-w-2xl mx-auto px-4 pb-10">
-      <h2 className="text-[#A1A1AA] text-sm font-mono">Technology & Tools I Use</h2>
+      <h2 className="text-[#A1A1AA] text-base font-mono uppercase tracking-wider">Technology & Tools I Use</h2>
       <div className="space-y-2">
         <div className="flex flex-wrap gap-3">
           {techStack.map((tech) => (
             <div
               key={tech.name}
-              className="border rounded-lg text-xs text-[#EDEDED] bg-[#1A1A1A] flex border-[#27272A] items-center gap-2 w-fit px-4 py-1 hover:border-[#F43F5E]/75 transition-all duration-300 hover:cursor-pointer font-mono"
+              className="border rounded-lg text-sm text-[#EDEDED] bg-[#1A1A1A] flex border-[#27272A] items-center gap-2 w-fit px-4 py-1.5 hover:border-[#F43F5E]/75 transition-all duration-300 hover:cursor-pointer font-mono"
             >
               <div className="flex-shrink-0">
                 <tech.Icon 
-                  size={12} 
+                  size={14} 
                   className={tech.iconColor || 'text-[#EDEDED]'} 
                   strokeWidth={2.5}
                 />
               </div>
-              <span className="text-xs text-[#EDEDED]">{tech.name}</span>
+              <span className="text-sm text-[#EDEDED]">{tech.name}</span>
             </div>
           ))}
         </div>

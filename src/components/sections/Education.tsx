@@ -14,7 +14,7 @@ const education = [
 const Education = () => {
   return (
     <section className="flex flex-col gap-8 max-w-2xl mx-auto px-4 pb-10 w-full">
-      <h2 className="text-muted-foreground text-sm font-mono uppercase tracking-wider">education</h2>
+      <h2 className="text-muted-foreground text-base font-mono uppercase tracking-wider">education</h2>
       <div className="flex flex-col gap-4">
           {education.map((edu, index) => (
             <a
@@ -32,21 +32,21 @@ const Education = () => {
                     src={edu.logo}
                     loading="lazy"
                   />
-                  <div className="flex flex-col">
-                    <div className="flex items-center gap-1">
-                      <h3 className="font-medium text-sm font-mono text-foreground group-hover:text-foreground/80 transition-colors uppercase tracking-tight">
-                        {edu.institution}
-                      </h3>
-                      <ChevronRight className="w-3 h-3 text-muted-foreground" />
+                    <div className="flex flex-col">
+                      <div className="flex items-center gap-1">
+                        <h3 className="font-medium text-base font-mono text-foreground group-hover:text-foreground/80 transition-colors uppercase tracking-tight">
+                          {edu.institution}
+                        </h3>
+                        <ChevronRight className="w-4 h-4 text-muted-foreground" />
+                      </div>
+                      <p className="text-sm text-muted-foreground font-mono">
+                        {edu.degree}
+                      </p>
                     </div>
-                    <p className="text-xs text-muted-foreground font-mono">
-                      {edu.degree}
-                    </p>
                   </div>
-                </div>
-                <span className="text-xs text-muted-foreground whitespace-nowrap font-mono">
-                  {edu.duration}
-                </span>
+                  <span className="text-sm text-muted-foreground whitespace-nowrap font-mono">
+                    {edu.duration}
+                  </span>
               </div>
             </a>
           ))}

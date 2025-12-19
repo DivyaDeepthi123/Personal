@@ -20,7 +20,7 @@ const experiences = [
 const Experience = () => {
   return (
     <div className="flex flex-col gap-8 max-w-2xl mx-auto px-4 pb-10 w-full">
-      <h2 className="text-muted-foreground text-sm font-mono">Experience</h2>
+      <h2 className="text-muted-foreground text-base font-mono uppercase tracking-wider">Experience</h2>
       <div className="flex flex-col gap-4">
         {experiences.map((exp, index) => (
           <div
@@ -28,32 +28,32 @@ const Experience = () => {
             className="border border-border rounded-lg border-dashed hover:bg-secondary/50 transition-all group"
           >
             <div className="flex flex-col gap-2 p-4">
-              <div className="flex justify-between items-start">
-                <div className="flex flex-col gap-1">
-                  <h3 className="font-medium text-sm font-mono text-foreground group-hover:text-foreground/80 transition-colors">
-                    {exp.title}
-                  </h3>
-                    <div className="flex items-center gap-4">
-                    <img
-                      alt={exp.company}
-                      className="w-3 h-3 object-contain"
-                      src={exp.logo}
-                      loading="lazy"
-                    />
-                    <a
-                      href={exp.companyUrl}
-                      className="text-xs text-muted-foreground font-mono hover:text-foreground transition-colors"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {exp.company}
-                    </a>
+                <div className="flex justify-between items-start">
+                  <div className="flex flex-col gap-1">
+                    <h3 className="font-medium text-base font-mono text-foreground group-hover:text-foreground/80 transition-colors">
+                      {exp.title}
+                    </h3>
+                      <div className="flex items-center gap-4">
+                      <img
+                        alt={exp.company}
+                        className="w-4 h-4 object-contain"
+                        src={exp.logo}
+                        loading="lazy"
+                      />
+                      <a
+                        href={exp.companyUrl}
+                        className="text-sm text-muted-foreground font-mono hover:text-foreground transition-colors"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {exp.company}
+                      </a>
+                    </div>
                   </div>
+                  <span className="text-sm text-muted-foreground whitespace-nowrap font-mono">
+                    {exp.duration}
+                  </span>
                 </div>
-                <span className="text-xs text-muted-foreground whitespace-nowrap font-mono">
-                  {exp.duration}
-                </span>
-              </div>
             </div>
           </div>
         ))}

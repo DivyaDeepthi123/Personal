@@ -3,7 +3,7 @@ import React from "react";
 const About = () => {
   return (
     <section className="max-w-2xl mx-auto px-4 flex flex-col gap-3">
-      <div className="flex flex-col gap-2 text-[15px] text-muted-foreground leading-snug tracking-tight">
+      <div className="flex flex-col gap-3 text-base md:text-lg text-muted-foreground leading-relaxed tracking-tight">
         <p>-- I make things better with hard work, patience, and relentless debugging until things work the right way..</p>
         <p>-- I learnt by exploring the internet and building things. Love contributing to open source.</p>
         <p>-- when boredom hits, I usually spend my time reading books.</p>
