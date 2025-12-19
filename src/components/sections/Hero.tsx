@@ -66,9 +66,9 @@ export function HeroSection() {
             <div className="relative w-fit">
               <Image
                 alt="Profile"
-                width={64}
-                height={64}
-                className="w-16 h-16 rounded-full object-cover"
+                width={96}
+                height={96}
+                className="w-24 h-24 rounded-full object-cover"
                 src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/_-1766130699563.jpeg?width=8000&height=8000&resize=contain"
                 priority
               />
@@ -92,19 +92,16 @@ export function HeroSection() {
 
           <div>
             <h1 className="text-2xl md:text-3xl font-normal tracking-wider leading-tight text-foreground mb-1">
-              Hey!!! I am <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600 font-bold">Deepthi Paruchuri</span>
+              Hey there!!!
+            </h1>
+            <h1 className="text-2xl md:text-3xl font-normal tracking-wider leading-tight text-foreground mb-1">
+              I'm <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600 font-bold">Deepthi Paruchuri</span>
             </h1>
             <p className="text-muted-foreground text-[9px] md:text-[10px] font-mono">
               Applied AI Researcher (Deep Learning & LLMs)
             </p>
           </div>
         </div>
-
-        {mounted && (
-          <p className="text-muted-foreground text-l md:text-xl font-normal tracking-tight">
-            How&apos;s your {day}?
-          </p>
-        )}
       </div>
     </section>
   );

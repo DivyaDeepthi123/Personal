@@ -67,9 +67,9 @@ const TechStack: React.FC = () => {
             >
               <div className="flex-shrink-0">
                 <tech.Icon 
-                  size={14} 
+                  size={12} 
                   className={tech.iconColor || 'text-[#EDEDED]'} 
-                  strokeWidth={2.5}
+                  strokeWidth={2}
                 />
               </div>
               <span className="text-sm text-[#EDEDED]">{tech.name}</span>
