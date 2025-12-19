@@ -58,7 +58,6 @@ const HeroSection = () => {
 
       {/* Profile Info */}
         <div className="flex flex-row items-center gap-10">
-        <div className="flex flex-row items-center gap-10">
           <div className="flex flex-col items-center gap-2">
             {mounted && (
               <p className="text-muted-foreground/60 text-[10px] md:text-xs font-mono lowercase whitespace-nowrap">
@@ -100,7 +99,6 @@ const HeroSection = () => {
                     Applied AI Researcher (Deep Learning & LLMs)
                   </p>
               </div>
-        </div>
         </div>
     </section>
   );
