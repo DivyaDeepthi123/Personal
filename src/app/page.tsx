@@ -11,9 +11,9 @@ export default function Home() {
     <main className="container min-h-screen py-20 vertical-rhythm">
       <HeroSection />
       <About />
-      <Education />
       <Projects />
       <Experience />
+      <Education />
       <TechStack />
       <Connect />
     </main>
