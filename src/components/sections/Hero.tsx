@@ -92,7 +92,7 @@ const HeroSection = () => {
       </div>
 
       {/* Professional Summary */}
-      <div className="flex flex-col gap-2 w-full tracking-wider leading-6">
+      <div className="flex flex-col gap-8 w-full tracking-wider leading-6">
         <p className="text-muted-foreground text-sm">
           I&apos;m Deepthii.. I make things better with hard work, patience, and relentless debugging 
           until things work the right way.

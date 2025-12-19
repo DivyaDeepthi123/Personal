@@ -121,13 +121,14 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border cursor-none;
   }
 
   html {
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    cursor: none;
   }
 
   body {
@@ -135,6 +136,7 @@
     font-size: 0.875rem;
     line-height: 1.6;
     position: relative;
+    cursor: none;
   }
 
   body::before {
