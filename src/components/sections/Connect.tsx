@@ -9,7 +9,7 @@ import { Github, Linkedin, Mail } from 'lucide-react';
 const Connect = () => {
   return (
     <>
-      <section className="max-w-2xl mx-auto px-4 pb-10 flex flex-col gap-4">
+      <section className="max-w-2xl mx-auto px-4 pb-10 flex flex-col gap-8">
         <h2 className="text-[#A1A1AA] text-sm font-mono font-normal">Connect with Me</h2>
         
         <div className="flex gap-2 flex-wrap">

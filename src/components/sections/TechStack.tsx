@@ -51,7 +51,7 @@ const techStack: TechItem[] = [
 
 const TechStack: React.FC = () => {
   return (
-    <section className="flex flex-col gap-4 max-w-2xl mx-auto px-4 pb-10">
+    <section className="flex flex-col gap-8 max-w-2xl mx-auto px-4 pb-10">
       <h2 className="text-[#A1A1AA] text-sm font-mono">Technology & Tools I Use</h2>
       <div className="space-y-2">
         <div className="flex flex-wrap gap-3">

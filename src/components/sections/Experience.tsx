@@ -19,7 +19,7 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <div className="flex flex-col gap-4 max-w-2xl mx-auto px-4 pb-10 w-full">
+    <div className="flex flex-col gap-8 max-w-2xl mx-auto px-4 pb-10 w-full">
       <h2 className="text-muted-foreground text-sm font-mono">Experience</h2>
       <div className="flex flex-col gap-4">
         {experiences.map((exp, index) => (
@@ -33,7 +33,7 @@ const Experience = () => {
                   <h3 className="font-medium text-sm font-mono text-foreground group-hover:text-foreground/80 transition-colors">
                     {exp.title}
                   </h3>
-                  <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-4">
                     <img
                       alt={exp.company}
                       className="w-3 h-3 object-contain"

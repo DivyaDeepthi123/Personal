@@ -6,8 +6,10 @@ import { Clock } from "lucide-react";
 
 const HeroSection = () => {
   const [time, setTime] = useState<string>("");
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const updateTime = () => {
       const now = new Date();
       const options: Intl.DateTimeFormatOptions = {
@@ -40,19 +42,19 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="max-w-2xl mx-auto px-4 py-10 flex flex-col gap-4">
+    <section className="max-w-2xl mx-auto px-4 py-10 flex flex-col gap-8">
       {/* Header Metadata */}
       <div className="flex justify-end items-center">
         <div className="flex items-center gap-2 text-muted-foreground">
           <Clock size={14} className="stroke-[1.5]" />
           <span className="text-xs font-mono tracking-wider uppercase">
-            {time || "00:00:00 IST"}
+            {mounted ? time : "00:00:00 IST"}
           </span>
         </div>
       </div>
 
       {/* Profile Info */}
-      <div className="flex flex-row items-center gap-6">
+      <div className="flex flex-row items-center gap-10">
         <div className="relative w-fit">
            <Image
               alt="Profile"

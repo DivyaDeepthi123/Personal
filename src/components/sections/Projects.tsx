@@ -89,7 +89,7 @@ const ProjectCard = ({ project }: { project: ProjectItem }) => {
 
 export default function Projects() {
   return (
-    <section className="flex flex-col gap-4 max-w-2xl mx-auto px-4 pb-10">
+    <section className="flex flex-col gap-8 max-w-2xl mx-auto px-4 pb-10">
       <h2 className="text-muted text-sm font-mono">Projects I&apos;ve Built</h2>
       <div className="flex flex-col gap-4">
         {projects.map((project) => (
