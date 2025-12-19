@@ -13,16 +13,55 @@ interface ProjectItem {
 
 const projects: ProjectItem[] = [
   {
-    id: "feon",
-    title: "Feon",
+    id: "zero-shot-stance",
+    title: "Zero-Shot Stance Detection",
     shortDescription:
-      "Feon helps you track spending, scan receipts, and understand your expenses by simply chatting on WhatsApp.",
+      "Developed an NLP pipeline for zero-shot stance detection using transformer-based models like T5, BART-base, and KeyBART.",
     extendedDescription: [
-      "Everything works where you already are—no downloads, no new apps, no confusing screens.",
-      "Feon quietly organizes your expenses in the background so you don’t have to think about it.",
-      "You get clear weekly summaries that show where your money goes, without charts or jargon.",
+      "Implemented models such as T5, BART-base, and KeyBART to dynamically extract keyphrases from unstructured text.",
+      "Used BERTweet for stance prediction without task-specific fine-tuning.",
+      "Achieved an 85% Macro F1 score, showing strong generalization on unseen topics.",
+      "Experimented with model architectures and data preprocessing strategies based on recent research papers.",
     ],
-    link: "https://feon.ai",
+    link: "https://github.com",
+  },
+  {
+    id: "kitchen-renovation-ai",
+    title: "AI Agent for Kitchen Renovation",
+    shortDescription:
+      "Modular, cloud-native AI system using Google’s Agent Development Kit (ADK) to automate kitchen renovation planning.",
+    extendedDescription: [
+      "Built single-agent and multi-agent workflows with agents for proposal generation, compliance checks, and order tracking.",
+      "Integrated Gemini LLM for natural language inputs and Cloud Run for serverless deployment.",
+      "Used AlloyDB for real-time data access and GCS-based PDF storage.",
+      "Implemented secure IAM-based backend access.",
+    ],
+    link: "https://github.com",
+  },
+  {
+    id: "ai-website-agent",
+    title: "AI-Powered Website Agent",
+    shortDescription:
+      "Automated meeting scheduling system using n8n, Docker, and Gemini LLM.",
+    extendedDescription: [
+      "Collects user details and discussion topics directly from the website interface.",
+      "Verifies slot availability through Google Calendar and logs appointments in Google Sheets.",
+      "Ensures bookings are made with at least 48 hours’ notice.",
+      "Containerized using Docker for seamless deployment and scalability.",
+    ],
+    link: "https://github.com",
+  },
+  {
+    id: "slm-development",
+    title: "Language Model Development",
+    shortDescription:
+      "Development and pre-training of a Gemma 3 270M-like Small Language Model (SLM) in PyTorch.",
+    extendedDescription: [
+      "Applied techniques for efficient training and model optimization in PyTorch.",
+      "Implemented data processing and tokenization pipelines for large text datasets.",
+      "Focused on pre-training and architectural efficiency.",
+    ],
+    link: "https://github.com",
   },
 ];
 
