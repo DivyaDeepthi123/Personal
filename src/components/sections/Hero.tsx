@@ -42,7 +42,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="max-w-2xl mx-auto px-4 py-10 flex flex-col gap-8">
+    <section className="max-w-2xl mx-auto px-4 pt-10 pb-2 flex flex-col gap-8">
       {/* Header Metadata */}
       <div className="flex justify-end items-center">
         <div className="flex items-center gap-2 text-muted-foreground">
