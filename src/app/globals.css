@@ -193,7 +193,7 @@
 }
 
 @layer utilities {
-  .dashed-border {
+  .custom-dashed-border {
     border-style: dashed;
     border-width: 1px;
     border-color: var(--color-border);
