@@ -92,9 +92,8 @@ const HeroSection = () => {
       {/* Professional Summary */}
       <div className="flex flex-col gap-2 w-full tracking-wider leading-6">
         <p className="text-muted-foreground text-sm">
-          I&apos;m Pavushetty Yashwanth Krishna. I design and make things. I arrange everything so
-          it&apos;s easy to understand. I aim for things to be straightforward and
-          reliable.
+          I&apos;m Deepthii.. I make things better with hard work, patience, and relentless debugging 
+          until things work the right way.
         </p>
         <p className="text-muted-foreground text-sm">
           I like solving problems. When something is broken or confusing, I want
