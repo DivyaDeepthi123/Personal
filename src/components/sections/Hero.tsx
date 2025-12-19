@@ -92,7 +92,7 @@ export function HeroSection() {
 
           <div>
             <h1 className="text-2xl md:text-3xl font-normal tracking-wider leading-tight text-foreground mb-1">
-              Hey!!! I am <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600 font-bold">Deepthi</span>
+              Hey!!! I am <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600 font-bold">Deepthi Paruchuri</span>
             </h1>
             <p className="text-muted-foreground text-[9px] md:text-[10px] font-mono">
               Applied AI Researcher (Deep Learning & LLMs)

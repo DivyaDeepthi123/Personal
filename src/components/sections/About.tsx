@@ -6,7 +6,7 @@ const About = () => {
       <div className="flex flex-col gap-3 text-base md:text-lg text-muted-foreground leading-relaxed tracking-tight">
         <p>-- I make things better with hard work, patience, and relentless debugging until things work the right way..</p>
         <p>-- I learnt by exploring the internet and building things. Love contributing to open source.</p>
-        <p>-- When boredom hits, I usually spend my time reading books and exploring the groundbreaking truths of AI..</p>
+        <p>-- When boredom hits, I spend my time exploring the groundbreaking truths of AI..</p>
       </div>
       <div>
         <p className="text-muted-foreground text-sm flex items-center gap-1.5">

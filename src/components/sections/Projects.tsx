@@ -8,23 +8,10 @@ interface ProjectItem {
   title: string;
   shortDescription: string;
   extendedDescription: string[];
-  link: string;
+  //link: string;
 }
 
 const projects: ProjectItem[] = [
-  {
-    id: "zero-shot-stance",
-    title: "Zero-Shot Stance Detection",
-    shortDescription:
-      "Developed an NLP pipeline for zero-shot stance detection using transformer-based models like T5, BART-base, and KeyBART.",
-    extendedDescription: [
-      "Implemented models such as T5, BART-base, and KeyBART to dynamically extract keyphrases from unstructured text.",
-      "Used BERTweet for stance prediction without task-specific fine-tuning.",
-      "Achieved an 85% Macro F1 score, showing strong generalization on unseen topics.",
-      "Experimented with model architectures and data preprocessing strategies based on recent research papers.",
-    ],
-    link: "https://github.com",
-  },
   {
     id: "kitchen-renovation-ai",
     title: "AI Agent for Kitchen Renovation",
@@ -36,7 +23,7 @@ const projects: ProjectItem[] = [
       "Used AlloyDB for real-time data access and GCS-based PDF storage.",
       "Implemented secure IAM-based backend access.",
     ],
-    link: "https://github.com",
+    //link: "https://github.com",
   },
   {
     id: "ai-website-agent",
@@ -49,11 +36,11 @@ const projects: ProjectItem[] = [
       "Ensures bookings are made with at least 48 hours’ notice.",
       "Containerized using Docker for seamless deployment and scalability.",
     ],
-    link: "https://github.com",
+    //link: "https://github.com",
   },
   {
     id: "slm-development",
-    title: "Language Model Development",
+    title: "Language Model Development(SLM training)",
     shortDescription:
       "Development and pre-training of a Gemma 3 270M-like Small Language Model (SLM) in PyTorch.",
     extendedDescription: [
@@ -61,7 +48,7 @@ const projects: ProjectItem[] = [
       "Implemented data processing and tokenization pipelines for large text datasets.",
       "Focused on pre-training and architectural efficiency.",
     ],
-    link: "https://github.com",
+    //link: "https://github.com",
   },
 ];
 
@@ -72,19 +59,19 @@ const ProjectCard = ({ project }: { project: ProjectItem }) => {
     <div className="border border-border rounded-lg border-dashed hover:bg-secondary/50 transition-all group">
       <div className="flex flex-col gap-2 p-4">
           <div className="flex items-center justify-between">
-            <h3 className="font-medium text-base font-mono text-foreground group-hover:text-foreground/80 transition-colors">
+            <h3 className="font-medium text-base font-mono text-foreground group-hover:text-foreground/100 transition-colors">
               {project.title}
             </h3>
           </div>
-          <div className="text-sm text-muted">
-            <p className="leading-relaxed text-sm font-mono tracking-wider">
+          <div className="text-sm">
+            <p className="leading-relaxed text-sm font-mono tracking-wider text-muted-foreground">
               {project.shortDescription}
             </p>
           </div>
         <div className="flex justify-between items-center mt-1">
           <button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="flex items-center gap-1 text-xs text-muted hover:text-foreground transition-colors cursor-pointer"
+            className="flex items-center gap-1 text-xs hover:text-foreground transition-colors cursor-pointer text-muted-foreground"
           >
             <span className="font-mono">Know More</span>
             <ChevronDown
@@ -93,14 +80,7 @@ const ProjectCard = ({ project }: { project: ProjectItem }) => {
               }`}
             />
           </button>
-          <a
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-xs text-muted hover:text-foreground transition-colors font-mono"
-          >
-            Visit &rarr;
-          </a>
+
         </div>
       </div>
 
@@ -114,7 +94,7 @@ const ProjectCard = ({ project }: { project: ProjectItem }) => {
             {project.extendedDescription.map((desc, index) => (
                 <p
                   key={index}
-                  className="leading-relaxed text-sm font-mono tracking-wider text-muted"
+                  className="leading-relaxed text-sm font-mono tracking-wider text-muted-foreground"
                 >
                   {desc}
                 </p>
@@ -129,7 +109,7 @@ const ProjectCard = ({ project }: { project: ProjectItem }) => {
 export default function Projects() {
   return (
     <section className="flex flex-col gap-8 max-w-2xl mx-auto px-4 pb-10">
-      <h2 className="text-muted text-base font-mono uppercase tracking-wider">Projects I&apos;ve Built</h2>
+      <h2 className="text-base font-mono uppercase tracking-wider font-bold">Projects I&apos;ve Built</h2>
       <div className="flex flex-col gap-4">
         {projects.map((project) => (
           <ProjectCard key={project.id} project={project} />
