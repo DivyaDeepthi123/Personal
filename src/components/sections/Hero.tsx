@@ -55,7 +55,7 @@ const HeroSection = () => {
       </div>
 
       {/* Profile Info */}
-      <div className="flex flex-row items-center gap-4">
+      <div className="flex flex-row items-center gap-6">
         <div className="relative w-fit">
            <Image
               alt="Profile"
@@ -84,10 +84,10 @@ const HeroSection = () => {
 
         <div>
           <h1 className="text-lg font-normal tracking-wider leading-6 text-foreground">
-            Pavushetty Yashwanth Krishna.
+            Paruchuri Divya Deepthi
           </h1>
           <p className="text-muted-foreground text-sm font-mono">
-            Generative AI Developer.
+            Deep Learning and LLM Researcher.
           </p>
         </div>
       </div>
