@@ -179,6 +179,20 @@
     font-size: 1.125rem;
   }
 
+  .footer-blur {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 5rem;
+    background: linear-gradient(to top, var(--color-background) 20%, transparent);
+    backdrop-filter: blur(4px);
+    pointer-events: none;
+    z-index: 40;
+  }
+}
+
+@layer utilities {
   .dashed-border {
     border-style: dashed;
     border-width: 1px;
@@ -195,18 +209,6 @@
     min-width: 1.5rem;
   }
 
-  .footer-blur {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 5rem;
-    background: linear-gradient(to top, var(--color-background) 20%, transparent);
-    backdrop-filter: blur(4px);
-    pointer-events: none;
-    z-index: 40;
-  }
-
   .badge {
     @apply inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border bg-secondary text-xs transition-colors hover:bg-accent/10 hover:border-accent/30;
   }
@@ -218,9 +220,7 @@
   .experience-item {
     @apply flex flex-col gap-1 py-4 border-b border-dashed border-border last:border-0;
   }
-}
 
-@layer utilities {
   .vertical-rhythm > * + * {
     margin-top: 2.5rem;
   }
