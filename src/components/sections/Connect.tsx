@@ -17,21 +17,9 @@ const Connect = () => {
   return (
     <>
       <section className="max-w-2xl mx-auto px-4 pb-10 flex flex-col gap-4">
-        <h2 className="text-[#A1A1AA] text-sm font-mono font-normal">Connect with Me</h2>
         
         <div className="flex justify-center w-full">
           <Dock className="pointer-events-auto">
-            <a href="/">
-              <DockIcon tooltip="Home">
-                <Home className="size-5 text-white" />
-              </DockIcon>
-            </a>
-            <a href="/blog">
-              <DockIcon tooltip="Notebook">
-                <Notebook className="size-5 text-white" />
-              </DockIcon>
-            </a>
-            <DockSeparator />
             <a href="https://github.com/nikhilnigamnik" target="_blank" rel="noopener noreferrer">
               <DockIcon tooltip="GitHub">
                 <Github className="size-5 text-white" />
@@ -52,14 +40,6 @@ const Connect = () => {
                 <Mail className="size-5 text-white" />
               </DockIcon>
             </a>
-            <DockSeparator />
-            <DockIcon 
-              tooltip="Theme" 
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            >
-              <Sun className="size-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0 text-white" />
-              <Moon className="absolute size-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100 text-white" />
-            </DockIcon>
           </Dock>
         </div>
       </section>
