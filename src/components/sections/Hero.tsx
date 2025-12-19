@@ -44,7 +44,7 @@ const HeroSection = () => {
       {/* Header Metadata */}
       <div className="flex justify-between items-center">
         <h2 className="text-xs font-mono text-muted-foreground tracking-wider leading-6 uppercase">
-          EST. 2003
+          EST. 2004
         </h2>
         <div className="flex items-center gap-2 text-muted-foreground">
           <Clock size={14} className="stroke-[1.5]" />
