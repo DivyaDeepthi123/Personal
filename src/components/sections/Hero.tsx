@@ -15,10 +15,12 @@ const HeroSection = () => {
         minute: "2-digit",
         second: "2-digit",
         hour12: false,
-        timeZone: "Asia/Kolkata",
+        timeZone: "Asia/Kolkata", // Matching the general location from content
         timeZoneName: "short",
       };
       const timeString = new Intl.DateTimeFormat("en-US", options).format(now);
+      // Format to match screenshot: 23:37:26 CST (example)
+      // We'll simplify to just HH:MM:SS IST/CST based on current local or specific zone
       setTime(timeString.replace("GMT+5:30", "IST"));
     };
 
@@ -27,14 +29,22 @@ const HeroSection = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const currentDay = new Intl.DateTimeFormat("en-US", { weekday: "long" }).format(new Date());
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key.toLowerCase() === "c") {
+        navigator.clipboard.writeText("divyadeepthiparuchuri@gmail.com");
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, []);
 
   return (
-    <section className="max-w-2xl mx-auto px-4 py-10 flex flex-col gap-8">
+    <section className="max-w-2xl mx-auto px-4 py-10 flex flex-col gap-4">
       {/* Header Metadata */}
       <div className="flex justify-between items-center">
         <h2 className="text-xs font-mono text-muted-foreground tracking-wider leading-6 uppercase">
-          EST. 2024
+          EST. 2004
         </h2>
         <div className="flex items-center gap-2 text-muted-foreground">
           <Clock size={14} className="stroke-[1.5]" />
@@ -45,50 +55,66 @@ const HeroSection = () => {
       </div>
 
       {/* Profile Info */}
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-row items-center gap-6">
         <div className="relative w-fit">
            <Image
-              alt="Saumya"
-              width={80}
-              height={80}
-              className="w-20 h-20 rounded-full object-cover grayscale border border-white/10"
-              src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/image-1766133007779.png?width=8000&height=8000&resize=contain"
+              alt="Profile"
+              width={64}
+              height={64}
+              className="w-16 h-16 rounded-full object-cover"
+              src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/_-1766130699563.jpeg?width=8000&height=8000&resize=contain"
               priority
             />
           
           {/* Status Indicator */}
-          <div className="absolute bottom-1 right-1 group">
+          <div className="absolute bottom-0 right-0 group">
             <span className="w-3.5 h-3.5 bg-background rounded-full flex items-center justify-center cursor-pointer border-[1.5px] border-background">
-              <span className="w-2.5 h-2.5 bg-emerald-500 rounded-full"></span>
+              <span className="w-2.5 h-2.5 bg-success rounded-full"></span>
             </span>
+            <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-50">
+              <div className="bg-secondary/80 backdrop-blur-xl border border-border rounded-xl px-2.5 py-1.5 flex items-center gap-2 whitespace-nowrap shadow-lg">
+                <span className="w-2 h-2 bg-success rounded-full"></span>
+                <span className="text-foreground text-[10px] uppercase font-mono tracking-tight">
+                  Available for work
+                </span>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div className="flex flex-col gap-2">
-          <h1 className="text-3xl font-semibold tracking-tight text-foreground">
-            Hey, Saumya here
+        <div>
+          <h1 className="text-lg font-normal tracking-wider leading-6 text-foreground">
+            Paruchuri Divya Deepthi
           </h1>
-          <p className="text-muted-foreground text-lg">
-            How&apos;s your {currentDay} ?
+          <p className="text-muted-foreground text-sm font-mono">
+            Deep Learning and LLM Researcher.
           </p>
         </div>
       </div>
 
       {/* Professional Summary */}
-      <div className="flex flex-col gap-4 w-full text-lg leading-relaxed text-muted-foreground">
-        <p>
-          I&apos;m your friendly neighborhood CAD wizard from the mystical land of Haridwar (yep, the place considered as a gateway to lord). With 5+ years of doodling... uh, I mean designing, I turn &ldquo;wait, how?&rdquo; ideas into &ldquo;wow, that&rsquo;s slick!&rdquo; reality.
+      <div className="flex flex-col gap-2 w-full tracking-wider leading-6">
+        <p className="text-muted-foreground text-sm">
+          I&apos;m Pavushetty Yashwanth Krishna. I design and make things. I arrange everything so
+          it&apos;s easy to understand. I aim for things to be straightforward and
+          reliable.
         </p>
-        <p>
-          Whether I&apos;m jamming with a team of quirky geniuses or flying solo like a design ninja, I bring a mix of creativity, precision, and just enough magic to make projects shine.
+        <p className="text-muted-foreground text-sm">
+          I like solving problems. When something is broken or confusing, I want
+          to fix it. When something could be better, I want to make it better.
+        </p>
+        <p className="text-muted-foreground text-sm">
+          When I&apos;m done for the day, I get on my{" "}
+          <span className="text-foreground">bike</span> and ride through
+          different places in India.
         </p>
       </div>
 
       {/* Email Hint */}
       <div>
-        <p className="text-muted-foreground text-sm flex items-center gap-1.5 opacity-50">
+        <p className="text-muted-foreground text-sm flex items-center gap-1.5">
           Press{" "}
-          <kbd className="text-foreground text-[10px] border border-border px-1.5 py-0.5 rounded bg-secondary font-mono">
+          <kbd className="text-foreground text-[10px] border border-border px-1.5 py-0.5 rounded bg-secondary hover:bg-foreground/10 transition-colors cursor-pointer font-mono min-w-[1.5rem] text-center shadow-sm">
             C
           </kbd>{" "}
           to copy my email
