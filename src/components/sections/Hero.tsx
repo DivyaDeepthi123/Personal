@@ -46,7 +46,7 @@ export function HeroSection() {
   }, []);
 
   return (
-    <section className="max-w-2xl mx-auto px-4 pt-10 pb-2 flex flex-col gap-8">
+    <section className="max-w-2xl mx-auto px-4 pt-0 pb-2 flex flex-col gap-8">
       {/* Header Metadata */}
       <div className="flex flex-col gap-4">
         <div className="flex justify-end items-center">

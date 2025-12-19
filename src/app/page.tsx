@@ -8,7 +8,7 @@ import Connect from "@/components/sections/Connect";
 
 export default function Home() {
   return (
-    <main className="container min-h-screen py-20 vertical-rhythm">
+    <main className="container min-h-screen pt-4 pb-20 vertical-rhythm">
       <HeroSection />
       <About />
       <Projects />
