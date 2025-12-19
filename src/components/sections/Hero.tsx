@@ -21,7 +21,7 @@ const HeroSection = () => {
       const timeString = new Intl.DateTimeFormat("en-US", options).format(now);
       // Format to match screenshot: 23:37:26 CST (example)
       // We'll simplify to just HH:MM:SS IST/CST based on current local or specific zone
-      setTime(timeString.replace("GMT+5:30", "IST"));
+          setTime(timeString.replace("GMT+5:30", "IST"));
     };
 
     updateTime();
@@ -42,10 +42,7 @@ const HeroSection = () => {
   return (
     <section className="max-w-2xl mx-auto px-4 py-10 flex flex-col gap-4">
       {/* Header Metadata */}
-      <div className="flex justify-between items-center">
-        <h2 className="text-xs font-mono text-muted-foreground tracking-wider leading-6 uppercase">
-          EST. 2004
-        </h2>
+      <div className="flex justify-end items-center">
         <div className="flex items-center gap-2 text-muted-foreground">
           <Clock size={14} className="stroke-[1.5]" />
           <span className="text-xs font-mono tracking-wider uppercase">
