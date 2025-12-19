@@ -4,17 +4,17 @@ const About = () => {
   return (
     <section className="max-w-2xl mx-auto px-4 flex flex-col gap-3">
       <div className="flex flex-col gap-2 text-[15px] text-muted-foreground leading-snug tracking-tight">
-        <p>tldr; learnt by hacking around on the internet.</p>
-        <p>i like technology and deep science. they make a dent in the universe.</p>
-        <p>i write code and make zero mrr apps.</p>
-        <p>
-          if you want to know more about me,{" "}
-          <a
-            href="#"
-            className="text-foreground underline underline-offset-4 decoration-muted-foreground/60 hover:decoration-foreground transition-colors"
-          >
-            here are somethings i believe in.
-          </a>
+        <p>-- I make things better with hard work, patience, and relentless debugging until things work the right way..</p>
+        <p>-- I learnt by exploring the internet and building things. Love contributing to open source.</p>
+        <p>-- when boredom hits, I usually spend my time reading books.</p>
+      </div>
+      <div>
+        <p className="text-muted-foreground text-sm flex items-center gap-1.5">
+          Press{" "}
+          <kbd className="text-foreground text-[10px] border border-border px-1.5 py-0.5 rounded bg-secondary hover:bg-foreground/10 transition-colors cursor-pointer font-mono min-w-[1.5rem] text-center shadow-sm">
+            C
+          </kbd>{" "}
+          to copy my email
         </p>
       </div>
     </section>
