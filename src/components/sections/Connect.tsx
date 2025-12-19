@@ -20,17 +20,17 @@ const Connect = () => {
         
         <div className="flex justify-center w-full">
           <Dock className="pointer-events-auto">
-            <a href="https://github.com/nikhilnigamnik" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/divyadeepthi123" target="_blank" rel="noopener noreferrer">
               <DockIcon tooltip="GitHub">
                 <Github className="size-5 text-white" />
               </DockIcon>
             </a>
-            <a href="https://www.linkedin.com/in/nikhilnigamnik/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/divya-deepthi-paruchuri-7683172ba/" target="_blank" rel="noopener noreferrer">
               <DockIcon tooltip="LinkedIn">
                 <Linkedin className="size-5 text-white" />
               </DockIcon>
             </a>
-            <a href="https://x.com/nikhilnigamnik" target="_blank" rel="noopener noreferrer">
+            <a href="https://x.com/DivyaDeepthi824" target="_blank" rel="noopener noreferrer">
               <DockIcon tooltip="X">
                 <XIcon />
               </DockIcon>

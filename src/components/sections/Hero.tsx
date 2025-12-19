@@ -91,23 +91,6 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Professional Summary */}
-      <div className="flex flex-col gap-2 w-full tracking-wider leading-6">
-        <p className="text-muted-foreground text-sm">
-          I&apos;m Deepthii.. I make things better with hard work, patience, and relentless debugging 
-          until things work the right way.
-        </p>
-        <p className="text-muted-foreground text-sm">
-          I like solving problems. When something is broken or confusing, I want
-          to fix it. When something could be better, I want to make it better.
-        </p>
-        <p className="text-muted-foreground text-sm">
-          When I&apos;m done for the day, I get on my{" "}
-          <span className="text-foreground">bike</span> and ride through
-          different places in India.
-        </p>
-      </div>
-
       {/* Email Hint */}
       <div>
         <p className="text-muted-foreground text-sm flex items-center gap-1.5">
