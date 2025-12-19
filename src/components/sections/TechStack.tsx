@@ -1,18 +1,18 @@
 import React from 'react';
-import { 
-  Triangle, 
-  Github, 
-  Send, 
-  MousePointer2, 
-  Hexagon, 
-  Flame, 
-  Database, 
-  Leaf, 
-  Zap, 
-  Boxes, 
-  Atom, 
-  RefreshCw, 
-  Wind, 
+import {
+  Triangle,
+  Github,
+  Send,
+  MousePointer2,
+  Hexagon,
+  Flame,
+  Database,
+  Leaf,
+  Zap,
+  Boxes,
+  Atom,
+  RefreshCw,
+  Wind,
   Code2
 } from 'lucide-react';
 
