@@ -5,26 +5,29 @@ import Image from "next/image";
 import { Clock } from "lucide-react";
 
 const HeroSection = () => {
-  const [time, setTime] = useState<string>("");
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-    const updateTime = () => {
-      const now = new Date();
-      const options: Intl.DateTimeFormatOptions = {
-        hour: "2-digit",
-        minute: "2-digit",
-        second: "2-digit",
-        hour12: false,
-        timeZone: "Asia/Kolkata", // Matching the general location from content
-        timeZoneName: "short",
+    const [time, setTime] = useState<string>("");
+    const [day, setDay] = useState<string>("");
+    const [mounted, setMounted] = useState(false);
+  
+    useEffect(() => {
+      setMounted(true);
+      const updateTime = () => {
+        const now = new Date();
+        const options: Intl.DateTimeFormatOptions = {
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+          hour12: false,
+          timeZone: "Asia/Kolkata", // Matching the general location from content
+          timeZoneName: "short",
+        };
+        const timeString = new Intl.DateTimeFormat("en-US", options).format(now);
+        // Format to match screenshot: 23:37:26 CST (example)
+        // We'll simplify to just HH:MM:SS IST/CST based on current local or specific zone
+            setTime(timeString.replace("GMT+5:30", "IST"));
+        
+        setDay(new Intl.DateTimeFormat("en-US", { weekday: "long" }).format(now));
       };
-      const timeString = new Intl.DateTimeFormat("en-US", options).format(now);
-      // Format to match screenshot: 23:37:26 CST (example)
-      // We'll simplify to just HH:MM:SS IST/CST based on current local or specific zone
-          setTime(timeString.replace("GMT+5:30", "IST"));
-    };
 
     updateTime();
     const interval = setInterval(updateTime, 1000);
@@ -85,10 +88,15 @@ const HeroSection = () => {
             <h1 className="text-2xl md:text-3xl font-normal tracking-wider leading-tight text-foreground mb-1">
               Paruchuri Divya Deepthi
             </h1>
-            <p className="text-muted-foreground text-base md:text-lg font-mono">
-              Deep Learning and LLM Researcher.
-            </p>
-          </div>
+              <p className="text-muted-foreground text-base md:text-lg font-mono">
+                Deep Learning and LLM Researcher.
+              </p>
+              {mounted && (
+                <p className="text-muted-foreground/60 text-xs md:text-sm font-mono mt-2 lowercase">
+                  how&apos;s your {day}?
+                </p>
+              )}
+            </div>
       </div>
     </section>
   );
