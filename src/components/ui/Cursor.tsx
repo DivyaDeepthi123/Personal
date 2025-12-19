@@ -45,18 +45,18 @@ export function CustomCursor() {
 
   return (
     <>
-      <motion.div
-        className="fixed top-0 left-0 w-3 h-3 bg-cyan-400 rounded-full pointer-events-none z-[9999] mix-blend-difference"
-        style={{
-          x: dotX,
-          y: dotY,
-          translateX: "-50%",
-          translateY: "-50%",
-          scale: isHovering ? 0.5 : 1,
-        }}
-      />
-      <motion.div
-        className="fixed top-0 left-0 w-10 h-10 border border-cyan-400/50 rounded-full pointer-events-none z-[9999] mix-blend-difference"
+        <motion.div
+          className="fixed top-0 left-0 w-3 h-3 bg-red-500 rounded-full pointer-events-none z-[9999] mix-blend-difference"
+          style={{
+            x: dotX,
+            y: dotY,
+            translateX: "-50%",
+            translateY: "-50%",
+            scale: isHovering ? 0.5 : 1,
+          }}
+        />
+        <motion.div
+          className="fixed top-0 left-0 w-10 h-10 border border-red-500/50 rounded-full pointer-events-none z-[9999] mix-blend-difference"
         style={{
           x: ringX,
           y: ringY,
