@@ -57,14 +57,14 @@ const HeroSection = () => {
       {/* Profile Info */}
       <div className="flex flex-col gap-4">
         <div className="relative w-fit">
-          <Image
-            alt="Nikhil Nigam"
-            width={64}
-            height={64}
-            className="w-16 h-16 rounded-2xl object-cover"
-            src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/e24247ae-cc7c-44c7-be34-358bb1d13606-nikhilnigam-in/assets/images/images_1.png"
-            priority
-          />
+            <Image
+              alt="Profile"
+              width={64}
+              height={64}
+              className="w-16 h-16 rounded-2xl object-cover"
+              src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/_-1766130699563.jpeg?width=8000&height=8000&resize=contain"
+              priority
+            />
           
           {/* Status Indicator */}
           <div className="absolute bottom-0 left-14 group">
