@@ -1,7 +1,7 @@
 "use client"
 
-import React, { useRef } from "react"
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion"
+import React, { createContext, useContext, useRef } from "react"
+import { motion, useMotionValue, useSpring, useTransform, type MotionValue } from "framer-motion"
 import { cn } from "@/lib/utils"
 import {
   Tooltip,
@@ -12,6 +12,22 @@ import {
 
 const DEFAULT_MAGNIFICATION = 60
 const DEFAULT_DISTANCE = 140
+
+interface DockContextData {
+  mouseX: MotionValue<number>
+  magnification: number
+  distance: number
+}
+
+const DockContext = createContext<DockContextData | undefined>(undefined)
+
+function useDock() {
+  const context = useContext(DockContext)
+  if (!context) {
+    throw new Error("useDock must be used within a Dock")
+  }
+  return context
+}
 
 export interface DockProps {
   className?: string
@@ -33,33 +49,21 @@ export const Dock = React.forwardRef<HTMLDivElement, DockProps>(
   ) => {
     const mouseX = useMotionValue(Infinity)
 
-    const renderChildren = () => {
-      return React.Children.map(children, (child) => {
-        if (React.isValidElement(child)) {
-          return React.cloneElement(child, {
-            ...child.props,
-            mouseX: mouseX,
-            magnification: magnification,
-            distance: distance,
-          })
-        }
-        return child
-      })
-    }
-
     return (
-      <motion.div
-        ref={ref}
-        onMouseMove={(e) => mouseX.set(e.pageX)}
-        onMouseLeave={() => mouseX.set(Infinity)}
-        {...props}
-        className={cn(
-          "mx-auto flex h-[58px] w-max items-center gap-2 rounded-2xl border border-white/10 bg-black/50 p-2 backdrop-blur-md",
-          className,
-        )}
-      >
-        {renderChildren()}
-      </motion.div>
+      <DockContext.Provider value={{ mouseX, magnification, distance }}>
+        <motion.div
+          ref={ref}
+          onMouseMove={(e) => mouseX.set(e.pageX)}
+          onMouseLeave={() => mouseX.set(Infinity)}
+          {...props}
+          className={cn(
+            "mx-auto flex h-[58px] w-max items-center gap-2 rounded-2xl border border-white/10 bg-black/50 p-2 backdrop-blur-md",
+            className,
+          )}
+        >
+          {children}
+        </motion.div>
+      </DockContext.Provider>
     )
   },
 )
@@ -74,24 +78,20 @@ DockSeparator.displayName = "DockSeparator"
 
 export interface DockIconProps {
   size?: number
-  magnification?: number
-  distance?: number
-  mouseX?: any
   className?: string
   children: React.ReactNode
   tooltip?: string
+  onClick?: () => void
 }
 
 export const DockIcon = ({
   size,
-  magnification = DEFAULT_MAGNIFICATION,
-  distance = DEFAULT_DISTANCE,
-  mouseX,
   className,
   children,
   tooltip,
   ...props
 }: DockIconProps) => {
+  const { mouseX, magnification, distance } = useDock()
   const ref = useRef<HTMLDivElement>(null)
 
   const distanceCalc = useTransform(mouseX, (val: number) => {
