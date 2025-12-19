@@ -58,7 +58,13 @@ const HeroSection = () => {
 
       {/* Profile Info */}
         <div className="flex flex-row items-center gap-10">
+        <div className="flex flex-row items-center gap-10">
           <div className="flex flex-col items-center gap-2">
+            {mounted && (
+              <p className="text-muted-foreground/60 text-[10px] md:text-xs font-mono lowercase whitespace-nowrap">
+                how&apos;s your {day}?
+              </p>
+            )}
             <div className="relative w-fit">
                <Image
                   alt="Profile"
@@ -84,21 +90,17 @@ const HeroSection = () => {
                 </div>
               </div>
             </div>
-            {mounted && (
-              <p className="text-muted-foreground/60 text-[10px] md:text-xs font-mono lowercase whitespace-nowrap">
-                how&apos;s your {day}?
-              </p>
-            )}
           </div>
 
             <div>
                 <h1 className="text-2xl md:text-3xl font-normal tracking-wider leading-tight text-foreground mb-1">
                   Hey!!! I am Deepthi 
                 </h1>
-                  <p className="text-muted-foreground text-xs md:text-sm font-mono lowercase">
+                  <p className="text-muted-foreground text-[10px] md:text-[11px] font-mono lowercase">
                     Applied AI Researcher (Deep Learning & LLMs)
                   </p>
               </div>
+        </div>
         </div>
     </section>
   );
