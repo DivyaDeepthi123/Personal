@@ -57,7 +57,7 @@ export const Dock = React.forwardRef<HTMLDivElement, DockProps>(
           onMouseLeave={() => mouseX.set(Infinity)}
           {...props}
           className={cn(
-            "mx-auto flex h-[58px] w-max items-center gap-2 rounded-2xl border border-white/10 bg-black/50 p-2 backdrop-blur-md",
+            "mx-auto flex h-[58px] w-max items-center gap-2 rounded-2xl p-2",
             className,
           )}
         >
@@ -118,10 +118,10 @@ export const DockIcon = ({
           <motion.div
             ref={ref}
             style={{ width }}
-            className={cn(
-              "flex aspect-square cursor-pointer items-center justify-center rounded-full bg-white/10 transition-colors hover:bg-white/20",
-              className,
-            )}
+              className={cn(
+                "flex aspect-square cursor-pointer items-center justify-center rounded-full transition-colors",
+                className,
+              )}
             {...props}
           >
             {children}
