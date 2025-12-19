@@ -10,24 +10,21 @@ const HeroSection = () => {
     const [mounted, setMounted] = useState(false);
   
     useEffect(() => {
-      setMounted(true);
-      const updateTime = () => {
-        const now = new Date();
-        const options: Intl.DateTimeFormatOptions = {
-          hour: "2-digit",
-          minute: "2-digit",
-          second: "2-digit",
-          hour12: false,
-          timeZone: "Asia/Kolkata", // Matching the general location from content
-          timeZoneName: "short",
-        };
-        const timeString = new Intl.DateTimeFormat("en-US", options).format(now);
-        // Format to match screenshot: 23:37:26 CST (example)
-        // We'll simplify to just HH:MM:SS IST/CST based on current local or specific zone
-            setTime(timeString.replace("GMT+5:30", "IST"));
-        
-        setDay(new Intl.DateTimeFormat("en-US", { weekday: "long" }).format(now));
+    setMounted(true);
+    const updateTime = () => {
+      const now = new Date();
+      const options: Intl.DateTimeFormatOptions = {
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: false,
+        timeZone: "Asia/Kolkata",
+        timeZoneName: "short",
       };
+      const timeString = new Intl.DateTimeFormat("en-US", options).format(now);
+      setTime(timeString.replace(/GMT[+-]\d+:?\d+/, "IST").replace("India Standard Time", "IST"));
+      setDay(new Intl.DateTimeFormat("en-US", { weekday: "long" }).format(now));
+    };
 
     updateTime();
     const interval = setInterval(updateTime, 1000);
