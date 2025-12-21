@@ -25,9 +25,9 @@ export function CustomCursor() {
 
     const handleMouseOver = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
-      const isClickable = 
-        target.closest('button') || 
-        target.closest('a') || 
+      const isClickable =
+        target.closest('button') ||
+        target.closest('a') ||
         window.getComputedStyle(target).cursor === 'pointer';
       setIsHovering(!!isClickable);
     };
@@ -45,18 +45,18 @@ export function CustomCursor() {
 
   return (
     <>
-        <motion.div
-          className="fixed top-0 left-0 w-3 h-3 bg-red-500 rounded-full pointer-events-none z-[9999] mix-blend-difference"
-          style={{
-            x: dotX,
-            y: dotY,
-            translateX: "-50%",
-            translateY: "-50%",
-            scale: isHovering ? 0.5 : 1,
-          }}
-        />
-        <motion.div
-          className="fixed top-0 left-0 w-10 h-10 border border-red-500/50 rounded-full pointer-events-none z-[9999] mix-blend-difference"
+      <motion.div
+        className="fixed top-0 left-0 w-3 h-3 bg-sky-300 rounded-full pointer-events-none z-[9999] mix-blend-difference"
+        style={{
+          x: dotX,
+          y: dotY,
+          translateX: "-50%",
+          translateY: "-50%",
+          scale: isHovering ? 0.5 : 1,
+        }}
+      />
+      <motion.div
+        className="fixed top-0 left-0 w-10 h-10 border border-sky-300/50 rounded-full pointer-events-none z-[9999] mix-blend-difference"
         style={{
           x: ringX,
           y: ringY,

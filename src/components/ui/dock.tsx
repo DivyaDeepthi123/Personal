@@ -2,13 +2,13 @@
 
 import React, { createContext, useContext, useRef } from "react"
 import { motion, useMotionValue, useSpring, useTransform, type MotionValue } from "framer-motion"
-import { cn } from "@/lib/utils"
+import { cn } from "../../lib/utils"
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/components/ui/tooltip"
+} from "./tooltip"
 
 const DEFAULT_MAGNIFICATION = 60
 const DEFAULT_DISTANCE = 140
@@ -118,10 +118,10 @@ export const DockIcon = ({
           <motion.div
             ref={ref}
             style={{ width }}
-              className={cn(
-                "flex aspect-square cursor-pointer items-center justify-center rounded-full transition-colors",
-                className,
-              )}
+            className={cn(
+              "flex aspect-square cursor-pointer items-center justify-center rounded-full transition-colors",
+              className,
+            )}
             {...props}
           >
             {children}
