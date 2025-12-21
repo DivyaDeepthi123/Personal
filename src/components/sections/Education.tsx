@@ -4,7 +4,7 @@ import { ChevronRight } from 'lucide-react';
 const education = [
   {
     institution: "Rajiv Gandhi University of Knowledge Technologies",
-    institutionUrl: "https://www.rgukt.ac.in/",
+    institutionUrl: "https://rguktn.ac.in/",
     logo: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/image-1766135888298.png?width=8000&height=8000&resize=contain",
     degree: "Bachelor of Technology(Computer Science Dept)",
     duration: "2022 - 2026"
