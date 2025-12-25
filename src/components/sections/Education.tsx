@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChevronRight } from 'lucide-react';
+
 
 const education = [
   {
@@ -37,7 +37,7 @@ const Education = () => {
                     <h3 className="font-medium text-base text-foreground group-hover:text-foreground/80 transition-colors uppercase tracking-tight">
                       {edu.institution}
                     </h3>
-                    <ChevronRight className="w-4 h-4 text-muted-foreground" />
+
                   </div>
                   <p className="text-sm text-muted-foreground">
                     {edu.degree}

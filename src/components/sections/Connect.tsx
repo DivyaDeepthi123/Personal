@@ -33,7 +33,7 @@ const Connect = () => {
       <section className="max-w-2xl mx-auto px-4 flex flex-col gap-2 !mt-12">
 
         <h2 className="text-center text-muted-foreground mb-0">
-          If you’re up late and curious too, hmu.
+          if you’re up late and curious too, hmu.
         </h2>
 
         <div className="flex justify-center w-full !mt-0">
