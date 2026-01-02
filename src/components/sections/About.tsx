@@ -7,7 +7,6 @@ const About = () => {
       <div className="flex flex-col gap-3 text-sm md:text-base text-muted-foreground leading-relaxed tracking-tight">
         <p>~ learning the concepts and tools needed to build practical LLM-based apps..</p>
         <p>~ making things better with hard work, patience, and relentless debugging until things work the right way..</p>
-        <p>~ learnt by exploring the internet and building things hands-on..</p>
         <p>~ usually, spend my time exploring the groundbreaking truths of AI..</p>
       </div>
     </section>

@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState, useEffect } from 'react';
-import { Github, Mail } from 'lucide-react';
+import { Github, Mail, FileText } from 'lucide-react';
 import { useTheme } from "next-themes";
 import { Dock, DockIcon, DockSeparator } from "../ui/dock";
 
@@ -56,6 +56,11 @@ const Connect = () => {
             <a href="mailto:divyadeepthiparuchuri@gmail.com">
               <DockIcon tooltip="Email">
                 <Mail className="size-6 text-white" />
+              </DockIcon>
+            </a>
+            <a href="/DivyaDeepthi_Resume.pdf" download="DivyaDeepthi_Resume.pdf">
+              <DockIcon tooltip="Download Resume">
+                <FileText className="size-6 text-white" />
               </DockIcon>
             </a>
           </Dock>

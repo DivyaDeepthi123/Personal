@@ -9,6 +9,8 @@ import {
   SiGooglecloud,
   SiLinux,
   SiVsco,
+  SiGit,
+  SiGithub,
 } from 'react-icons/si';
 import {
   Brain,
@@ -42,6 +44,8 @@ const frameworks: TechItem[] = [
   { name: 'RAG', Icon: Layers, iconColor: 'text-orange-400', isBrand: false },
   { name: 'AWS', Icon: SiAmazon, iconColor: 'text-orange-400', isBrand: true },
   { name: 'Docker', Icon: SiDocker, iconColor: 'text-blue-500', isBrand: true },
+  { name: 'Git', Icon: SiGit, iconColor: 'text-red-500', isBrand: true },
+  { name: 'GitHub', Icon: SiGithub, iconColor: 'text-white', isBrand: true },
   { name: 'GCP', Icon: SiGooglecloud, iconColor: 'text-green-400', isBrand: true },
   { name: 'Linux', Icon: SiLinux, iconColor: 'text-white', isBrand: true },
 ];

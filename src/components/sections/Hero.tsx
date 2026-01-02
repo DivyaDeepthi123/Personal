@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { Clock, Download } from "lucide-react";
+import { Clock } from "lucide-react";
 
 export function HeroSection() {
   const [time, setTime] = useState<string>("");
@@ -97,24 +97,14 @@ export function HeroSection() {
             <h1 className="text-2xl md:text-3xl font-normal tracking-wider leading-tight text-foreground mb-1">
               I'm <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600 font-bold">Divya Deepthi Paruchuri</span>
             </h1>
-            <p className="text-muted-foreground text-[9px] md:text-[10px]">
-              Applied AI Researcher (Deep Learning & LLMs)
+            <p className="text-sm md:text-base font-medium inline-block bg-gradient-to-r from-neutral-400 via-white to-neutral-400 bg-[length:200%_auto] animate-shimmer bg-clip-text text-transparent">
+              AI Researcher & Developer (Deep Learning & LLMs)
             </p>
           </div>
         </div>
       </div>
 
-      {/* Resume Download */}
-      <div className="flex justify-start">
-        <a
-          href="/DivyaDeepthi_Resume.pdf"
-          download="DivyaDeepthi_Resume.pdf"
-          className="flex items-center gap-2 px-4 py-2 bg-foreground text-background rounded-full hover:bg-foreground/90 transition-colors text-sm font-medium"
-        >
-          <Download size={16} />
-          <span>Download Resume</span>
-        </a>
-      </div>
+
     </section>
   );
 }
